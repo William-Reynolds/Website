@@ -1,0 +1,475 @@
+/*Author: Billy Reynolds
+Project: Web Dev Final
+ */
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body{
+  height:100%;
+  font: Arnoldboecklin;
+  display:grid;
+  grid-template-columns: 180px auto 60px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "head head head" "nav main aside" "foot foot foot";
+  background-color: #FFF0D9;
+}
+header{
+  width:125%;
+  color:gray;
+  background: black;
+
+  background-image: url("soap.jpg");
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 50vh;
+ grid-area: head;
+}
+.hT{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#yum{
+  height: 265%;
+  width: 265%;
+  background-color: rgb(52, 46, 44);
+}
+#lit{
+  height: 160%;
+  width: 120%;
+  background-color: rgb(52, 46, 44);
+}
+nav {
+   grid-area: nav;
+    transition: background-color, 1s;
+}
+#cookie{
+  font-size: 46px;
+  color: #FFF0D;
+  display: none;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  height: 60%;
+  width: 108%;
+  padding: 5px 14px;
+  align-items:flex-end;
+  background-color: rgb(52, 46, 44);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+  #close{
+    bottom:0;
+    position: absolute;
+    height: 20px;
+    background-color: #777;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  #f1{
+    display: none;
+  }
+header>ul>li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding-right: 10px;
+}
+
+header>ul>li>a {
+    position: relative;
+    color: #FFEEE6;
+    text-shadow: 0 0 8px white;
+}
+
+header>ul>li>a:hover {
+    background-color: white;
+}
+article {
+    background: rgb(99, 97, 77);
+    color: white;
+    padding: 10px;
+   grid-area: article;
+
+}
+main{
+  text-align: center;
+  padding: 10px;
+  line-height: 2;
+}
+ol,ul.main li{
+  display: inline-block;
+}
+aside {
+  display: block;
+  color: black;
+  grid-area: aside;
+}
+
+nav a {
+            color: rgb(211, 192, 161);
+        }
+footer {
+            background: rgb(52, 46, 44);
+            color: #FFF0D9;
+            text-align: center;
+            padding: 10px;
+           grid-area: foot;
+        }
+table {
+            width: 100%;
+            background: rgb(52, 46, 44);
+            text-align: center;
+        }
+
+table > caption {
+          text-align: center;
+          font-size: 120%
+        }
+
+thead {
+          text-decoration: underline;
+        }
+footer > p,span{
+  display: inline;
+  color: #FFF0D9;
+}
+#chuck{
+  display: none;
+  text-align: center;
+}
+input{
+  background-color: #FFEEE6;;
+}
+#sbmt{
+  background-color: green;
+}
+/*Media Queries
+*/
+@media all and (min-width: 280px){
+  header{
+      width:194%;
+  }
+  header > ul{
+    font-size: 30px;
+  }
+  body{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "head" "main" "nav" "aside" "foot"
+}
+  #cookie{
+    width: 176%;
+    font-size: 34px;
+  }
+  #yum{
+    height:300%;
+    width: 100%;
+  }
+  footer{
+    width: 188%;
+  }
+}
+@media all and (min-width: 320px){
+  header, nav, main, aside, footer {
+    font-size: 28px;
+ text-align: center;
+}
+  header{
+      width:277%;
+  }
+  header > ul{
+    font-size: 23px;
+  }
+  body{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "head" "main" "nav" "aside" "foot"
+}
+  #cookie{
+    width: 257%;
+    font-size: 38px;
+  }
+  aside{
+    width: 100%;
+  }
+  nav{
+    width: 79%;
+  }
+  footer{
+    width: 270%;
+  }
+  input, textarea{
+    font-size: 23px;
+    width: 30%;
+    height: 300%;
+  }
+}
+@media all and (min-width: 360px){
+  header, nav, main, aside, footer {
+    font-size: 8px;
+ text-align: center;
+}
+  header{
+      width:102.2%;
+  }
+  body{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "head" "main" "nav" "aside" "foot"
+}
+  #cookie{
+    width: 92%;
+    font-size: 19px;
+  }
+  aside{
+    width: 31%;
+    height:31%;
+  }
+  nav{
+    height: 15%;
+    width: 25%;
+  }
+  footer{
+    width: 97%;
+  }
+  input, textarea{
+    font-size: 6px;
+    width: 12%;
+    height: 120%;
+  }
+}
+@media all and (min-width: 375px){
+  header, nav, main, aside, footer {
+    font-size: 24px;
+ text-align: center;
+}
+  header{
+      width:204%;
+  }
+  body{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "head" "main" "nav" "aside" "foot"
+}
+#cookie{
+  width: 190%;
+  font-size: 42px;
+}
+#lit{
+  width: 225%;
+  border-radius: 70%;
+}
+#yum{
+  border-radius: 70%;
+  height:300%;
+  width: 200%;
+}
+  #close{
+    width: 30px;
+    height: 30px;
+  }
+  footer{
+    width: 198%;
+  }
+  input, textarea{
+    font-size: 30px;
+    width: 30%;
+    height: 150%;
+  }
+  }
+  @media all and (min-width: 411px){
+    header, nav, main, aside, footer {
+      font-size: 11px;
+   text-align: center;
+  }
+    header{
+      font-size: 18px;
+        width:102.2%;
+    }
+    body{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "head" "main" "nav" "aside" "foot"
+  }
+    #cookie{
+      width: 94%;
+      font-size: 35px;
+    }
+    aside{
+      width: 31%;
+      height:31%;
+    }
+    nav{
+      height: 15%;
+      width: 25%;
+    }
+    footer{
+      width: 98%;
+    }
+    input, textarea{
+      font-size: 14px;
+      width: 18%;
+      height: 150%;
+    }
+  }
+  @media all and (min-width: 414px){
+    header, nav, main, aside, footer {
+      font-size: 12px;
+   text-align: center;
+  }
+    header{
+      font-size: 18px;
+        width:102.2%;
+    }
+    body{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "head" "main" "nav" "aside" "foot"
+  }
+    #cookie{
+      width: 94%;
+      font-size: 35px;
+    }
+    aside{
+      width: 31%;
+      height:31%;
+    }
+    nav{
+      height: 15%;
+      width: 25%;
+    }
+    footer{
+      width: 98%;
+    }
+    input, textarea{
+      font-size: 14px;
+      width: 18%;
+      height: 150%;
+    }
+    }
+  @media all and (min-width: 731px){
+    header, nav, main, aside, footer {
+      font-size: 18px;
+   text-align: center;
+}
+    header{
+        width:103%;
+    }
+    body{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "head" "main" "nav" "aside" "foot"
+  }
+      #cookie{
+        width: 98%;
+        font-size: 28px;
+      }
+      aside{
+        height: 38%;
+        width: 19.4%;
+        padding:10px;
+      }
+      nav{
+        height: 18%;
+        width: 18%;
+      }
+      footer{
+        width: 100%;
+      }
+      input, textarea{
+        font-size: 15px;
+        width: 30%;
+        height: 300%;
+      }
+    }
+  @media all and (min-width: 768px){
+    header, nav, main, aside, footer {
+      font-size: 58px;
+   text-align: center;
+}
+    header{
+        width:257.6%;
+        font-size: 60px;
+    }
+    header > ul{
+      font-size: 44px;
+    }
+    body{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "head" "main" "nav" "aside" "foot"
+  }
+      #cookie{
+        width: 249.92%;
+        font-size: 72px;
+      }
+      #close{
+        width: 60px;
+        height: 60px;
+      }
+      aside{
+        height: 28%;
+        width: 50%;
+        padding:10px;
+      }
+      nav{
+        height: 28%;
+        width: 42%;
+      }
+      footer{
+        width: 255%;
+        font-size: 38px;
+      }
+      input, textarea{
+        font-size: 35px;
+        width: 20%;
+        height: 160%;
+      }
+  }
+@media all and (min-width: 1024px){
+  body{
+    height:100%;
+    font: Arnoldboecklin;
+    display:grid;
+    grid-template-columns: 180px auto 180px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "head head head" "nav main aside" "foot foot foot";
+    background-color: #FFF0D9;
+  }
+  header, nav, main, aside, footer {
+    font-size: 18px;
+    text-align: center;
+}
+  header{
+      width:106.6%;
+  }
+#cookie{
+  width: 104.75%;
+  font-size: 65px;
+}
+#close{
+  width: 25px;
+  height: 25px;
+}
+nav{
+  width: 46%;
+  height: 9.2%;
+}
+aside{
+  width: 79.8%;
+  height: 6.8%;
+}
+footer{
+  width:105.5%;
+}
+}
